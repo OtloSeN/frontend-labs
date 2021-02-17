@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Title</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Home</a>
+                <a class="nav-link mr-auto" href="create-form.html">Add Movie</a>
+                <form class="d-flex" action="/">
+                    <div class="form-inline"><select class="form-control" name="sort">
+                            <option disabled="disabled" hidden="hidden" selected="selected">Sort by</option>
+                            <option value="A-Z">A-Z</option>
+                            <option value="Z-A">Z-A</option>
+                            <option value="Newest">Newest</option>
+                        </select><button class="btn btn-outline-success my-2 my-sm-0 mx-2" type="submit">Sort</button></div>
+                    <div class="form-inline"><input class="form-control mr-sm-2" id="search" type="search" name="search" placeholder="Titile or Actor" value="" /><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></div>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container d-flex flex-wrap justify-content-center">
+            <div class="card" style="width: 15rem;">
+                <img class="card-img-top" src="public/img/movie.jpg" alt="Card image cap" />
+                <div class="card-body">
+                    <h5 class="card-title">Avatar</h5>
+                    <p>2009 / DVD</p>
+                    <div class="text">
+                        <a href="movie-details.html">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="width: 15rem;">
+                <img class="card-img-top" src="public/img/movie.jpg" alt="Card image cap" />
+                <div class="card-body">
+                    <h5 class="card-title">Avengers: Endgame</h5>
+                    <p>2019 / DVD</p>
+                    <div class="text">
+                        <a href="movie-details.html">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="width: 15rem;">
+                <img class="card-img-top" src="public/img/movie.jpg" alt="Card image cap" />
+                <div class="card-body">
+                    <h5 class="card-title">TENET</h5>
+                    <p>2020 / DVD</p>
+                    <div class="text">
+                        <a href="movie-details.html">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="width: 15rem;">
+                <img class="card-img-top" src="public/img/movie.jpg" alt="Card image cap" />
+                <div class="card-body">
+                    <h5 class="card-title">Superman VS Batman</h5>
+                    <p>2016 / Bluray</p>
+                    <div class="text">
+                        <a href="movie-details.html">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="text-center"><small>&copy Copyright Movies 2021</small></footer>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</html>
