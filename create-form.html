@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Title</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <script src="public/js/addActor.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Home</a>
+                <a class="nav-link mr-auto" href="create-form.html">Add Movie</a>
+                
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container d-flex flex-wrap justify-content-center">
+            <div>
+                <div class="text-center">
+                    <h1 class="display-4">Add your favorite Movie</h1>
+                    <hr />
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group"><label for="title">Name</label>
+                            <input class="form-control" id="title" type="text" name="title" placeholder="Name" />
+                        </div>
+                        <div class="form-group"><label for="releaseYear">Year</label>
+                            <input class="form-control" id="releaseYear" type="text" name="releaseYear" placeholder="Year" />
+                        </div>
+                        <div class="form-group"><label for="format">Format</label>
+                            <select class="form-control" id="format" name="format">
+                                <option value="VHS">VHS</option>
+                                <option value="DVD">DVD</option>
+                                <option value="Blu-Ray">Blu-Ray</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><label>Actors:</label>
+                            <ul class="d-flex flex-wrap" name="actors" id="actors-list"></ul>
+                            <div class="d-flex justify-content-between">
+                                <input class="form-control" id="actor" type="text" placeholder="Actor" onfocus="this.value=''" name="stars" />
+                                <input class="btn btn-outline-success btn-sm ml-3" type="button" value="Add Actor" onclick="addActor()" />
+                            </div>
+                        </div><button class="btn btn-success mb-2" onclick="addMovie()">Add Movie</button>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center">OR</div>
+                    <div class="col d-flex flex-column justify-content-center">
+                        <form action="/addMovies" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="file" name="moviefile" />
+                                <button class="btn btn-success mt-2" type="submit">Add Movies</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="text-center"><small>&copy Copyright Movies 2021</small></footer>
+</body>
+</html>
