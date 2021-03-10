@@ -1,0 +1,25 @@
+.Header {
+    background-color: #cccccc;
+    padding: 15px 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header-links {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.Header-links:hover {
+    color: blue;
+}
+
+.Header-filters {
+    display: flex;
+}
+
+.Header-filters * {
+    margin: 0 5px;
+}
