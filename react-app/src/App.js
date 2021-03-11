@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect }  from 'react-router-dom';
+import * as ROUTES from './constants/routes'
 
 import './App.css';
 
-import Header from './components/layouts/Header';
-import Footer from './components/layouts/Footer';
+import Header    from './components/layouts/Header';
+import Footer    from './components/layouts/Footer';
+import Movies    from './components/pages/Movies'
+import MovieForm from './components/pages/MovieForm'
 
 class App extends Component {
     render() {
         return (
             <div className="App">
                 <Header />
-                    <Route path="/" exact render={() => <h1>Home Page</h1>} />
-                    <Route path="/create-movie"  render={() => <h1>Create movie form</h1>} />
+
+                <Route path={ROUTES.ROOT} exact component={Movies} />
+                <Route path={ROUTES.MOVIE_CREATE_FORM} exact component={MovieForm} />
+
+                <Redirect
+                    to={{
+                        pathname : ROUTES.ROOT,
+                        state    : { from: ROUTES.NO_MATCH }
+                    }}
+                />
+
                 <Footer />
             </div>
         )

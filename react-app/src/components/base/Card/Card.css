@@ -1,0 +1,10 @@
+.Card {
+    margin: 15px;
+    width: 240px;
+    transition-duration: 0.3s;
+    box-shadow: 5px 5px 10px #8282829c;
+}
+
+.Card:hover {
+    transform: scale(1.03, 1.03);
+}
