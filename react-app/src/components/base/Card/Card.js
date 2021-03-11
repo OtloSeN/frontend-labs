@@ -1,4 +1,5 @@
-import React from 'react';
+import React       from 'react';
+import { NavLink } from 'react-router-dom'
 
 import './Card.css';
 
@@ -10,7 +11,7 @@ const Card = ({ title, text, logo, alt = 'Image', linkText, linkUrl, ...props })
                 <h5 className="card-title">{title}</h5>
                 <p>{text}</p>
                 <div className="text">
-                    <a href={linkUrl}>{linkText}</a>
+                    <NavLink to={linkUrl}>{linkText}</NavLink>
                 </div>
             </div>
         </div>
